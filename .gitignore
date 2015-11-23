@@ -33,6 +33,11 @@
 # Debug files
 *.dSYM/
 
+# Directories 
+output/
+bin/
+obj/
+
 # IDE 
 *.layout
 *.cbp
