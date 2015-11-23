@@ -1,0 +1,3 @@
+warning: source ..\modules\constants.f90 is not a readable file or directory... skipping.
+C:/Users/bgeneto/OneDrive/Trabalho/Pesquisa/2015/Magela/p_exc_tripleto-new/ssh.f90:90: warning: argument 'ocd' of command @param is not found in the argument list of occupation()
+C:/Users/bgeneto/OneDrive/Trabalho/Pesquisa/2015/Magela/p_exc_tripleto-new/ssh.f90:90: warning: argument 'ocu' of command @param is not found in the argument list of occupation()

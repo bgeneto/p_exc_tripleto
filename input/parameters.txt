@@ -1,0 +1,60 @@
+! =======================================================================
+!           This is the main input data file for the
+!           SSH (Su-Schrieffer-Heeger) model program.
+! =======================================================================
+
+&MESH
+n  = 20,                !< number of sites
+nu = 10,                !< number of electrons up
+nd = 10,                !< number of electrons down
+/
+
+&PHYSICAL
+fcnst  = 21.0d0,         !< force constant (K in eV/Å²)
+alp    = 4.1d0,          !< electron-phonon coupling constant (alpha in units of eV/Å)
+t0     = 2.5d0,          !< hopping term or transfer integral (eV)
+u      = 0.08d0,         !< onsite coulomb or onsite electron-electron interaction
+v      = 0.04d0,         !< intersite coulomb interaction or intersite electron-electron interaction
+delta0 = 0.05d0,         !< Brazovskii-Kirova symmetry breaking term. for cis (delta0 = 0.05), trans (delta0 = 0)
+tau    = 10.0d0,         !< switching smoothness parameter
+tomega = 15.3d0,         !< omega/t0 (see ref ?)
+gammal = 5.0d0,          !< damping term constant in fluctuation-dissipation theorem (viscosity term in Langevin's equation)
+flut   = 1.0d0,          !< fluctuation magnitude
+temp   = 25.0d0,         !< temperature in kelvins
+/
+
+&IMPURITY
+imp1   = 10,             !< site number for the first impurity positioning
+imp2   = 10,             !< site number for the second impurity positioning
+timp1  = 0.0d0,          !< first impurity strength (eV)
+timp2  = 0.0d0,          !< second impurity strength (eV)
+impon  = 0,              !< impurity switch on time
+impoff = 25001,          !< impurity switch off time
+/
+
+&ITERATION
+niter  = 25000,          !< total number of iteration (total_time = 4*iteration*delt in femtosecond)
+ierror = 1.0d-20,        !< iteration attained precision
+delt   = 0.01d0,         !< integration time step
+/
+
+&FIELD
+ifieldon  = 0,           !< electric field switch on time
+ifieldoff = 25001,       !< electric field switch off time
+efield    = -0.00385d0,  !< electric field strength (in units of 1.3 v/Å or 0.01 = 1.3mv/Å; max 2.0 mv/Å)
+/
+
+&FILENAMES
+exciton_polaron_fname      = "input/exciton_polaron.txt",
+up_occ_fname               = "output/electrons_up_occupation.txt",
+down_occ_fname             = "output/electrons_down_occupation.txt",
+updown_occ_fname           = "output/electrons_updown_occupation.txt",
+lattice_displacement_fname = "output/lattice_displacement.txt",
+energy_spectrum_up_fname   = "output/energy_spectrum_up.txt",
+energy_spectrum_down_fname = "output/energy_spectrum_down.txt",
+energies_fname             = "output/energies.txt",
+charge_density_fname       = "output/charge_density.txt",
+spin_density_fname         = "output/spin_density.txt",
+temperature_fname          = "output/temperature.txt",
+site_velocity_fname        = "output/site_velocity.txt",
+/
