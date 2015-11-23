@@ -1,4 +1,0 @@
-
- time step, electronic energy, lattice energy, kinetic energy, total energy
-
-      0 -0.2729464780E+02  0.1051877996E+01  0.0000000000E+00 -0.2624276980E+02
